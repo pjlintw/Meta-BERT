@@ -1,6 +1,6 @@
 # Meta-BERT: Learning to Learn fast For Low-Resource Text Classication
 
-[**Installation**](#installation) | [**Data**](#dataset) | [**Meta-BERT**](#Meta-BERT)
+[**Installation**](#installation) | [**Data**](#dataset) | [**Meta-BERT**](#meta-bert)
 
 We implement Meta-BERT that trains BERT for fast adapting to new tasks using limited examples. The distinctive feature of Meta-BERT is to meta-train the BERT model using First-Order-MAML, FOMAML, which enables the model to learn new tasks quickly. 
 
@@ -24,7 +24,7 @@ Note that `#S` refers to a number of the step in script and `#E` for the number 
 |       |-- example.log                   # Log file 
 |       |-- hyparams.txt                  # Hyperparameters
 |       └── ckpt
-|           └── meta.epoch-#E.step-#S.pt  # Checkpoint for the Meta-BERT saved at the #S-th step of #E-th epoch.
+|           └── meta.epoch-#E.step-#S.pt  # Checkpoint for the Meta-BERT saved at the #S-th step of #E-th epoch
 |-- dataset.json                          # Subset of Amazon Custom Reviews
 |-- task.py                               # Meta tasks builder script
 |-- build_dataset.py                      # Fine-tuning data builder script
@@ -84,11 +84,11 @@ Meta-BERT's model architecture is identical to BERT with a classifier layer wher
 
 In the meta-training stage, the pre-trained BERT’s parameters is trained using FOMAML and to be able to learn the unseen domain quickly. It enables the model to learn a set of initial parameters that adapts to new tasks quickly with limited examples. 
 
-To meta-train BERT with FOMAML, execute `run_meta_training.py` with the flag `--output_dir` to specify the repository for saving `hparam.txt`,  ckeckpoints and log file.
+To meta-train BERT with FOMAML, execute `run_meta_training.py` with the flag `--output_dir` to specify the repository for saving `hyparams.txt`,  ckeckpoints and log file.
 
 ```python
 python run_meta_training.py \
- --output_dir results/meta-train-tmp \
+ --output_dir results/meta-train-tmp
 ```
 
 The program will use the flasgs:
@@ -124,7 +124,7 @@ python run_finetuning.py \
   --zero_shot True
 ```
 
-After running the program, `hparam.txt`, checkpoints and log file will be saved in `results/zero-shot-tmp` folder. 
+After running the program, `hyparams.txt`, checkpoints and log file will be saved in `results/zero-shot-tmp` folder. 
 
 ### Contact Information
 
