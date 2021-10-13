@@ -44,11 +44,11 @@ Note that `#S` refers to a number of the step in script and `#E` for the number 
 Create an environment from file and activate the environment.
 
 ```
-conda env create -f environment.yaml
-conda activate integrated-gradients-cgan
+conda env create -f environment.yml
+conda activate meta-bert
 ```
 
-If conda fails to create an environment from `environment.yaml`. This may be caused by the platform-specific build constraints in the file. Try to create one by installing the important packages manually. The `environment.yaml` was built in macOS.
+If conda fails to create an environment from `environment.yml`. This may be caused by the platform-specific build constraints in the file. Try to create one by installing the important packages manually. The `environment.yml` was built in Linux.
 
 **Note**: Running `conda env export > environment.yaml` will include all the 
 dependencies conda automatically installed for you. Some dependencies may not work in different platforms.
