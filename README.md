@@ -50,7 +50,7 @@ conda activate meta-bert
 
 If conda fails to create an environment from `environment.yml`. This may be caused by the platform-specific build constraints in the file. Try to create one by installing the important packages manually. The `environment.yml` was built in Linux.
 
-**Note**: Running `conda env export > environment.yaml` will include all the 
+**Note**: Running `conda env export > environment.yml` will include all the 
 dependencies conda automatically installed for you. Some dependencies may not work in different platforms.
 We suggest you to use the `--from-history` flag to export the packages to the environment setting file.
 Make sure `conda` only exports the packages that you've explicitly asked for.
