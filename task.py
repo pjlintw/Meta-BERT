@@ -1,3 +1,6 @@
+"""Perform metatask"""
+# The script is modified from https://github.com/mailong25/meta-learning-bert/blob/master/task.py
+
 import os
 import torch
 from torch.utils.data import Dataset

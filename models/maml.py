@@ -1,4 +1,6 @@
 """Perform First-Order MAML."""
+# The script is modified from the `https://github.com/mailong25/meta-learning-bert/blob/master/maml.py`
+
 import logging
 from torch import nn
 from torch.nn import functional as F

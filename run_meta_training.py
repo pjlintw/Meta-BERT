@@ -1,4 +1,6 @@
 """Train meta-learning BERT."""
+# The script is modified from `https://github.com/mailong25/meta-learning-bert/blob/master/main.py`
+
 import os
 import argparse
 import logging
