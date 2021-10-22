@@ -1,4 +1,4 @@
-# Meta-BERT: Learning to Learn fast For Low-Resource Text Classication
+# Meta-BERT: Learning to Learn fast For Low-Resource Text Classification
 
 [**Installation**](#installation) | [**Data**](#dataset) | [**Meta-BERT**](#meta-bert)
 
